@@ -3,7 +3,15 @@ variable github_token {
 }
 
 variable members {
-  default = []
+  default = [
+    "jhonmike",
+    "rogerfernandes",
+    "lorival",
+    "raduq",
+    "nilemarbarcelos",
+    "t-bonatti",
+    "B0go"
+  ]
 }
 
 provider "github" {
