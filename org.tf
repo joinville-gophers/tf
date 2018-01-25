@@ -1,7 +1,3 @@
-variable github_token {
-  default = "token"
-}
-
 variable members {
   default = [
     "jhonmike",
@@ -12,11 +8,6 @@ variable members {
     "t-bonatti",
     "B0go"
   ]
-}
-
-provider "github" {
-  organization = "joinville-gophers"
-  token        = "${var.github_token}"
 }
 
 resource "github_membership" "members" {
