@@ -6,12 +6,12 @@ variable members {
     "raduq",
     "nilemarbarcelos",
     "t-bonatti",
-    "B0go"
+    "B0go",
   ]
 }
 
 resource "github_membership" "members" {
-  count      = "${length(var.members)}"
+  count    = "${length(var.members)}"
   username = "${element(var.members, count.index)}"
   role     = "member"
 }
@@ -25,4 +25,3 @@ resource "github_membership" "tmatias" {
   username = "tmatias"
   role     = "admin"
 }
-

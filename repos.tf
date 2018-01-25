@@ -8,11 +8,12 @@ resource "github_repository" "tf" {
 }
 
 resource "github_branch_protection" "tf_master" {
-  repository   = "tf"
-  branch       = "master"
+  repository = "tf"
+  branch     = "master"
+
   restrictions = {
-    users      = [
-      "caarlos0"
+    users = [
+      "caarlos0",
     ]
   }
 }
