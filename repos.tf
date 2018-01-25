@@ -17,3 +17,12 @@ resource "github_branch_protection" "tf_master" {
     ]
   }
 }
+
+resource "github_repository" "cfp" {
+  name        = "cfp"
+  description = "Call for papers repository"
+
+  homepage_url = "https://www.meetup.com/Joinville-Go-Meetup/"
+  has_issues   = true
+  has_wiki     = false
+}
