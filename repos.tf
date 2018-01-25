@@ -6,3 +6,13 @@ resource "github_repository" "tf" {
   has_issues   = true
   has_wiki     = false
 }
+
+resource "github_branch_protection" "tf_master" {
+  repository   = "tf"
+  branch       = "master"
+  restrictions = {
+    users      = [
+      "caarlos0"
+    ]
+  }
+}
