@@ -8,6 +8,9 @@ variable members {
     "t-bonatti",
     "B0go",
   ]
+
+  # add your username after the last user above.
+  # keep a comma at the end of the line, like a good gopher :)
 }
 
 resource "github_membership" "members" {
