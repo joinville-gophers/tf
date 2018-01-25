@@ -16,6 +16,10 @@ resource "github_branch_protection" "tf_master" {
       "caarlos0",
     ]
   }
+
+  required_pull_request_reviews = {
+    dismiss_stale_reviews       = true
+  }
 }
 
 resource "github_repository" "cfp" {
