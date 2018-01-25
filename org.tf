@@ -8,6 +8,7 @@ variable members {
     "t-bonatti",
     "B0go",
     "leandro-lugaresi",
+    "diogonicoleti",
   ]
 
   # add your username after the last user above.
