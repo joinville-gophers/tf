@@ -1,5 +1,5 @@
-variable members {
-  default = [
+locals {
+  members = [
     "jhonmike",
     "rogerfernandes",
     "lorival",
@@ -22,8 +22,8 @@ resource "github_team" "gophers" {
 }
 
 resource "github_team_membership" "members" {
-  count    = "${length(var.members)}"
-  username = "${element(var.members, count.index)}"
+  count    = "${length(local.members)}"
+  username = "${element(local.members, count.index)}"
   team_id  = "${github_team.gophers.id}"
   role     = "member"
 }
@@ -41,8 +41,8 @@ resource "github_team_membership" "tmatias" {
 }
 
 resource "github_membership" "members" {
-  count    = "${length(var.members)}"
-  username = "${element(var.members, count.index)}"
+  count    = "${length(local.members)}"
+  username = "${element(local.members, count.index)}"
   role     = "member"
 }
 
