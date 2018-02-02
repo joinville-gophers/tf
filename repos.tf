@@ -18,7 +18,7 @@ resource "github_branch_protection" "tf_master" {
   }
 
   required_pull_request_reviews = {
-    dismiss_stale_reviews       = true
+    dismiss_stale_reviews = true
   }
 }
 
