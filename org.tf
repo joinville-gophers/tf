@@ -16,6 +16,30 @@ variable members {
   # keep a comma at the end of the line, like a good gopher :)
 }
 
+resource "github_team" "gophers" {
+  name        = "Gophers"
+  description = "All Joinville Gophers"
+}
+
+resource "github_team_membership" "members" {
+  count    = "${length(var.members)}"
+  username = "${element(var.members, count.index)}"
+  team_id  = "${github_team.gophers.id}"
+  role     = "member"
+}
+
+resource "github_team_membership" "caarlos0" {
+  username = "caarlos0"
+  team_id  = "${github_team.gophers.id}"
+  role     = "maintainer"
+}
+
+resource "github_team_membership" "tmatias" {
+  username = "tmatias"
+  team_id  = "${github_team.gophers.id}"
+  role     = "maintainer"
+}
+
 resource "github_membership" "members" {
   count    = "${length(var.members)}"
   username = "${element(var.members, count.index)}"
