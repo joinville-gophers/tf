@@ -10,7 +10,6 @@ locals {
     "leandro-lugaresi",
     "diogonicoleti",
     "robertoduessmann",
-    "merencia",
   ]
 
   # add your username after the last user above.
@@ -41,6 +40,12 @@ resource "github_team_membership" "tmatias" {
   role     = "maintainer"
 }
 
+resource "github_team_membership" "merencia" {
+  username = "merencia"
+  team_id  = "${github_team.gophers.id}"
+  role     = "maintainer"
+}
+
 resource "github_membership" "members" {
   count    = "${length(local.members)}"
   username = "${element(local.members, count.index)}"
@@ -54,5 +59,10 @@ resource "github_membership" "caarlos0" {
 
 resource "github_membership" "tmatias" {
   username = "tmatias"
+  role     = "admin"
+}
+
+resource "github_membership" "merencia" {
+  username = "merencia"
   role     = "admin"
 }
