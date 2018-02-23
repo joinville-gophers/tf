@@ -20,6 +20,7 @@ locals {
 resource "github_team" "gophers" {
   name        = "Gophers"
   description = "All Joinville Gophers"
+  privacy     = "closed"
 }
 
 resource "github_team_membership" "members" {
