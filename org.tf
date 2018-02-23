@@ -10,7 +10,7 @@ locals {
     "leandro-lugaresi",
     "diogonicoleti",
     "robertoduessmann",
-    "paulosalum",
+    "PauloSalum",
     "brunofpimenta",
   ]
 
