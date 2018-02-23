@@ -10,6 +10,7 @@ locals {
     "leandro-lugaresi",
     "diogonicoleti",
     "robertoduessmann",
+    "paulosalum",
   ]
 
   # add your username after the last user above.
