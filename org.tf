@@ -11,6 +11,7 @@ locals {
     "diogonicoleti",
     "robertoduessmann",
     "paulosalum",
+    "brunofpimenta",
   ]
 
   # add your username after the last user above.
