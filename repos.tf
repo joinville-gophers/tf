@@ -49,4 +49,3 @@ resource "github_repository" "presentations" {
   has_issues   = true
   has_wiki     = false
 }
-
