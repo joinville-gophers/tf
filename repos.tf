@@ -40,3 +40,13 @@ resource "github_repository" "discussions" {
   has_wiki     = false
   auto_init    = true
 }
+
+resource "github_repository" "presentations" {
+  name        = "presentations"
+  description = ""
+
+  homepage_url = "https://www.meetup.com/Joinville-Go-Meetup/"
+  has_issues   = true
+  has_wiki     = false
+}
+
