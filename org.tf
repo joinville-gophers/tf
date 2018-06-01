@@ -12,6 +12,7 @@ locals {
     "robertoduessmann",
     "PauloSalum",
     "brunofpimenta",
+    "valtlfelipe",
   ]
 
   # add your username after the last user above.
